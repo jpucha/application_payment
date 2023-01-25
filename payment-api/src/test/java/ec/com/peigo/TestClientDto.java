@@ -3,6 +3,7 @@
  */
 package ec.com.peigo;
 
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -47,8 +48,9 @@ public class TestClientDto {
 
     @BeforeEach
     public void setup() {
-        mvc = MockMvcBuilders.webAppContextSetup(context).build();
+        mvc = MockMvcBuilders.webAppContextSetup(context).apply(springSecurity()).build();
     }
+
 
     @Test
     @Order(1)
