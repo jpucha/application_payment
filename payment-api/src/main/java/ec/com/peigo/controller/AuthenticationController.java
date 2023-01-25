@@ -28,7 +28,7 @@ import ec.com.peigo.controller.payment.vo.JwtResponse;
 @RequestMapping("/api/auth")
 public class AuthenticationController {
 
-    @Autowired
+    //@Autowired
     private AuthenticationManager authenticationManager;
 
     @Autowired
